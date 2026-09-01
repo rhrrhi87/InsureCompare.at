@@ -1,0 +1,29 @@
+# File: docker-compose.dev.yml
+# Development overrides. Use with:
+#     docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+#
+# - Mounts source for hot reload
+# - Exposes the API and DB on the host
+
+services:
+  api:
+    command: ["sh", "-c", "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"]
+    volumes:
+      - ./backend/app:/app/app:rw
+      - ./backend/alembic:/app/alembic:rw
+      - ./backend/scripts:/app/scripts:rw
+    environment:
+      ENVIRONMENT: development
+      LOG_LEVEL: DEBUG
+    ports:
+      - "8000:8000"
+
+  db:
+    ports:
+      - "5432:5432"
+
+  web:
+    profiles: ["disabled"]   # in dev we run vite on the host instead
+
+  proxy:
+    profiles: ["disabled"]

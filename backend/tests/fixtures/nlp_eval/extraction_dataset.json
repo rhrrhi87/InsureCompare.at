@@ -1,0 +1,33 @@
+{
+  "_provenance": "CONTROLLED TEST EXAMPLES — hand-authored, not from any real insurer document. Ground-truth numeric values are known exactly because they were written into the sentence by the author of this fixture. See docs/NLP_EVALUATION.md.",
+  "created": "2026-08-28",
+  "examples": [
+    {"text": "Die monatliche Prämie beträgt EUR 45,50.", "field": "monthly_premium_eur", "true_value": 45.5},
+    {"text": "Der Monatsbeitrag für diesen Tarif liegt bei EUR 22,90.", "field": "monthly_premium_eur", "true_value": 22.9},
+    {"text": "Sie zahlen monatlich EUR 89,00 für diesen Schutz.", "field": "monthly_premium_eur", "true_value": 89.0},
+    {"text": "Die Monatsprämie inklusive Steuern beträgt EUR 120,75.", "field": "monthly_premium_eur", "true_value": 120.75},
+
+    {"text": "Der Jahresbeitrag beläuft sich auf EUR 540,00.", "field": "annual_premium_eur", "true_value": 540.0},
+    {"text": "Die Jahresprämie für dieses Produkt beträgt EUR 1.080,00.", "field": "annual_premium_eur", "true_value": 1080.0},
+    {"text": "Sie zahlen jährlich EUR 610,50 für den vollen Versicherungsschutz.", "field": "annual_premium_eur", "true_value": 610.5},
+    {"text": "Der jährlich zu entrichtende Betrag beträgt EUR 275,00.", "field": "annual_premium_eur", "true_value": 275.0},
+
+    {"text": "Der Selbstbehalt beträgt EUR 300,00 pro Schadenfall.", "field": "deductible_eur", "true_value": 300.0},
+    {"text": "Die Selbstbeteiligung beläuft sich auf EUR 500,00.", "field": "deductible_eur", "true_value": 500.0},
+    {"text": "Der vereinbarte Selbstbehalt liegt bei EUR 150,00.", "field": "deductible_eur", "true_value": 150.0},
+    {"text": "Selbstbehalt: EUR 1.000,00 je Versicherungsfall.", "field": "deductible_eur", "true_value": 1000.0},
+    {"text": "Die Selbstbeteiligung des Versicherungsnehmers beträgt EUR 250,00.", "field": "deductible_eur", "true_value": 250.0},
+    {"text": "Der Selbstbehalt für diesen Baustein beträgt EUR 400,00.", "field": "deductible_eur", "true_value": 400.0},
+    {"text": "Bei diesem Tarif gilt ein Selbstbehalt von EUR 600,00.", "field": "deductible_eur", "true_value": 600.0},
+    {"text": "Die Police sieht einen Selbstbehalt von EUR 800,00 vor.", "field": "deductible_eur", "true_value": 800.0},
+
+    {"text": "Die Versicherungssumme beträgt EUR 50.000,00.", "field": "coverage_limit_eur", "true_value": 50000.0},
+    {"text": "Die Deckungssumme für Personenschäden beträgt EUR 8.000.000,00.", "field": "coverage_limit_eur", "true_value": 8000000.0},
+    {"text": "Die Versicherungssumme für Haushaltsinhalt beträgt EUR 100.000,00.", "field": "coverage_limit_eur", "true_value": 100000.0},
+    {"text": "Die Haftungsumme beträgt EUR 5.000.000,00.", "field": "coverage_limit_eur", "true_value": 5000000.0},
+    {"text": "Der Maximalbetrag der Entschädigung liegt bei EUR 25.000,00.", "field": "coverage_limit_eur", "true_value": 25000.0},
+    {"text": "Die Deckungssumme beläuft sich auf EUR 3.500.000,00.", "field": "coverage_limit_eur", "true_value": 3500000.0},
+    {"text": "Die Versicherungssumme ist mit EUR 200.000,00 begrenzt.", "field": "coverage_limit_eur", "true_value": 200000.0},
+    {"text": "Die Haftungsumme für dieses Produkt beträgt EUR 12.000.000,00.", "field": "coverage_limit_eur", "true_value": 12000000.0}
+  ]
+}

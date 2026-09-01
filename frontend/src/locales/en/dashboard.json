@@ -1,0 +1,60 @@
+{
+  "title": "User Dashboard",
+  "subtitle": "Set your preferences to get personalised insurance recommendations",
+  "actionCards": {
+    "upload": { "title": "Upload Policy", "subtitle": "Upload your PDF document" },
+    "compare": { "title": "Compare Policies", "subtitle": "View side-by-side comparison" },
+    "recommend": { "title": "AI Recommendations", "subtitle": "Get smart suggestions" },
+    "demo": { "title": "Demo Data", "subtitle": "View sample policies" }
+  },
+  "preferences": {
+    "title": "Your Preferences",
+    "subtitle": "The recommender uses these alongside your budget to rank policies.",
+    "insuranceType": "Insurance Type",
+    "monthlyBudget": "Monthly Budget ({{amount}})",
+    "riskTolerance": "Risk Tolerance",
+    "coverageLevel": "Preferred Coverage Level",
+    "deductiblePreference": "Deductible Preference",
+    "save": "Save Preferences",
+    "getRecommendations": "Get AI Recommendations →",
+    "advanced": {
+      "toggle": "Advanced scoring weights",
+      "hint": "Override the default factor weights. They must add up to 100%.",
+      "total": "Total: {{total}}%",
+      "totalError": "Weights must sum to 100% before saving.",
+      "resetDefaults": "Reset to defaults"
+    },
+    "requiredCoverages": {
+      "label": "Required coverages (optional)",
+      "hint": "Select any coverage types you specifically require."
+    }
+  },
+  "policyDetail": {
+    "coverageDetails": "Coverage Details",
+    "noCoverageItems": "No coverage items recorded.",
+    "additionalFeatures": "Additional Features",
+    "exclusionsTitle": "Policy Exclusions",
+    "exclusionsHint": "The following situations are NOT covered by this policy:",
+    "noExclusions": "No exclusions recorded.",
+    "summary": "Policy Summary",
+    "basicInfo": "Basic Information",
+    "financialDetails": "Financial Details",
+    "policyType": "Policy Type",
+    "insurer": "Insurer",
+    "notFound": "Policy not found.",
+    "backToRecommendations": "Back to recommendations",
+    "compareWithOthers": "Compare with Other Policies",
+    "viewRecommendations": "View AI Recommendations",
+    "perMonth": "per month",
+    "annually": "{{amount}} annually",
+    "deductibleHint": "Amount you pay before coverage kicks in",
+    "coverageLimitHint": "Maximum coverage amount",
+    "coverageItemsHint": "Different types of coverage included",
+    "sourceEvidence": "Source Evidence",
+    "sourceEvidenceHint": "The original clauses this entry is based on, with page number and extraction confidence.",
+    "noEvidenceDemo": "This is demonstration catalogue data with no attached source document. Upload your own policy on the Upload Policy page to see clause-level evidence extracted from a real document.",
+    "evidencePage": "Page {{page}}",
+    "evidenceConfidence": "Confidence: {{value}}",
+    "demoDataBadge": "Demonstration data"
+  }
+}

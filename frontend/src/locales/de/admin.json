@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "providers": "Versicherer",
+    "policies": "Policen",
+    "documents": "Dokumente",
+    "audit": "Audit"
+  },
+  "title": "Admin-Dashboard",
+  "subtitle": "Systemübersicht und Verwaltung",
+  "kpi": {
+    "totalUsers": "Benutzer gesamt",
+    "totalPolicies": "Policen gesamt",
+    "totalUploads": "Benutzer-Uploads",
+    "totalRecommendations": "Empfehlungen",
+    "activeHint": "Aktiv",
+    "catalogueHint": "Katalog",
+    "documentsHint": "Dokumente",
+    "aiHint": "KI"
+  },
+  "userManagement": {
+    "title": "Benutzerverwaltung",
+    "empty": "Noch keine Benutzer.",
+    "joined": "Registriert: {{date}}"
+  },
+  "recentActivity": {
+    "title": "Letzte Aktivitäten",
+    "empty": "Keine aktuellen Aktivitäten.",
+    "system": "System"
+  },
+  "insurers": {
+    "title": "Registrierte Versicherer ({{count}})",
+    "policiesCount": "{{count}} Policen"
+  },
+  "policyDistribution": {
+    "title": "Policenverteilung nach Art",
+    "ofTotal": "{{percent}} % der Gesamtzahl"
+  },
+  "systemInfo": {
+    "title": "Systeminformationen",
+    "version": "Version",
+    "environment": "Umgebung",
+    "lastUpdated": "Zuletzt aktualisiert"
+  },
+  "policies": {
+    "title": "Policenverwaltung",
+    "create": "Neue Police",
+    "edit": "Police bearbeiten",
+    "retire": "Außer Kraft setzen",
+    "reactivate": "Reaktivieren",
+    "retireConfirm": "Diese Police außer Kraft setzen? Sie wird nicht mehr in Vergleichen oder Empfehlungen angeboten, frühere Empfehlungen, die sie verwendet haben, bleiben jedoch erhalten.",
+    "statusActive": "Aktiv",
+    "statusRetired": "Außer Kraft",
+    "filterStatus": "Status",
+    "filterLine": "Versicherungsart",
+    "search": "Policen suchen…",
+    "columns": { "name": "Name", "provider": "Versicherer", "line": "Art", "premium": "Monatsprämie", "status": "Status", "actions": "Aktionen" }
+  },
+  "providers": {
+    "title": "Versichererverwaltung",
+    "create": "Neuer Versicherer",
+    "edit": "Versicherer bearbeiten",
+    "columns": { "name": "Name", "country": "Land", "rating": "Bewertung", "policies": "Policen", "actions": "Aktionen" }
+  },
+  "documents": {
+    "title": "Dokumentenprüfung",
+    "columns": { "user": "Benutzer", "filename": "Datei", "status": "Status", "confidence": "OCR-Sicherheit", "uploaded": "Hochgeladen" },
+    "lowConfidenceFlag": "Niedrige Sicherheit"
+  },
+  "audit": {
+    "title": "Audit-Protokoll",
+    "columns": { "action": "Aktion", "actor": "Akteur", "entity": "Entität", "when": "Zeitpunkt" },
+    "empty": "Noch keine Audit-Ereignisse."
+  }
+}

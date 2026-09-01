@@ -1,0 +1,16 @@
+{
+  "home": "Home",
+  "insuranceTypes": "Insurance Types",
+  "howItWorks": "How It Works",
+  "whyInsureCompare": "Why InsureCompare",
+  "about": "About",
+  "login": "Sign In",
+  "register": "Get Started",
+  "dashboard": "Dashboard",
+  "uploadPolicy": "Upload Policy",
+  "recommendations": "Recommendations",
+  "compare": "Compare",
+  "adminDashboard": "Admin Dashboard",
+  "adminBadge": "Admin",
+  "welcome": "Welcome, {{name}}"
+}

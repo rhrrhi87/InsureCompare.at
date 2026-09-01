@@ -1,0 +1,95 @@
+# Environment and credentials
+.env
+.env.*
+**/.env
+**/.env.*
+*.env
+*.env.*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.hypothesis/
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+.eslintcache
+.vite/
+.parcel-cache/
+.turbo/
+.next/
+*.tsbuildinfo
+playwright-report/
+playwright/.cache/
+test-results/
+.playwright-browsers/
+axe-results.json
+e2e-results.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.recommended.json
+.DS_Store
+Thumbs.db
+
+# Docker / build artefacts
+*.log
+*.pid
+*.seed
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+docker-compose.override.yml
+
+# Local data
+data/
+uploads_local/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+postgres-data/
+pgdata/
+uploads/
+
+# Real official insurer source documents are downloaded, not committed —
+# redistribution permission for third-party insurer PDFs is unclear (see
+# docs/DATA_PROVENANCE_AUDIT.md §8). The manifest (URLs, checksums,
+# retrieval metadata — no insurer content) is the exception: it's what
+# makes the documents reproducible without redistributing them. Git
+# requires each ancestor directory to be un-ignored too, hence the chain.
+!backend/data/
+!backend/data/source_documents/
+backend/data/source_documents/*
+!backend/data/source_documents/MANIFEST.json

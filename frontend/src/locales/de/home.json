@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "titleLine1": "Verstehen Sie Ihre Versicherung.",
+    "titleLine2": "Nicht nur den Preis.",
+    "subtitle": "Vergleichen Sie österreichische Versicherungsprodukte nach Deckung, Ausschlüssen, Selbstbehalt und Preis – unterstützt durch nachvollziehbare KI-gestützte Dokumentenanalyse.",
+    "ctaPrimary": "Versicherungen vergleichen",
+    "ctaSecondary": "So funktioniert's"
+  },
+  "features": {
+    "ai": {
+      "title": "KI-gestützte Analyse",
+      "body": "Eine transparente OCR- und NLP-Pipeline extrahiert Deckung, Ausschlüsse, Selbstbehalt und Limits direkt aus den Versicherungsdokumenten."
+    },
+    "comparison": {
+      "title": "Umfassender Vergleich",
+      "body": "Vergleichen Sie Preis, Deckung, Ausschlüsse, Selbstbehalt und Risikostufe für bis zu drei Policen nebeneinander."
+    },
+    "austria": {
+      "title": "Österreichische Versicherer",
+      "body": "Katalogdaten von UNIQA, Allianz Austria, Wiener Städtische, Generali Austria und Donau Versicherung."
+    }
+  },
+  "insuranceTypesTitle": "Verfügbare Versicherungsarten",
+  "howItWorks": {
+    "title": "So funktioniert's",
+    "steps": {
+      "upload": {
+        "title": "Hochladen oder auswählen",
+        "body": "Laden Sie Ihre eigene Versicherungspolizze hoch oder wählen Sie eine Police aus dem Demonstrationskatalog."
+      },
+      "analysis": {
+        "title": "KI-gestützte Analyse",
+        "body": "Unsere OCR- und NLP-Pipeline extrahiert Deckung, Ausschlüsse, Selbstbehalt und Limits aus dem Dokumententext."
+      },
+      "compare": {
+        "title": "Mehr als Preise vergleichen",
+        "body": "Vergleichen Sie bis zu drei Policen nebeneinander nach Preis, Deckung, Ausschlüssen und Selbstbehalt – nicht nur nach der Prämie."
+      },
+      "understand": {
+        "title": "Empfehlung nachvollziehen",
+        "body": "Sehen Sie genau, wie jeder Faktor – Deckung, Preis, Ausschlüsse, Selbstbehalt und Profilübereinstimmung – zur Bewertung beigetragen hat."
+      }
+    }
+  },
+  "whyInsureCompare": {
+    "title": "Mehr als nur ein Preisvergleich",
+    "subtitle": "Eine niedrigere Prämie bedeutet nicht automatisch eine bessere Eignung. InsureCompare.at bewertet Deckung, Ausschlüsse, Selbstbehalt, Dokumentenbelege und Ihre eigenen Präferenzen gemeinsam mit dem Preis.",
+    "matrix": {
+      "dimension": "Dimension",
+      "conventional": "Herkömmlicher Vergleichsansatz",
+      "insurecompare": "InsureCompare.at",
+      "rows": {
+        "premium": "Prämienvergleich",
+        "coverage": "Deckungsvergleich",
+        "exclusions": "Ausschlussanalyse",
+        "documents": "Analyse der Versicherungsdokumente",
+        "preferences": "Abgleich mit Nutzerpräferenzen",
+        "explainable": "Nachvollziehbare Bewertung",
+        "clauseEvidence": "Klauselgenaue Belege",
+        "traceability": "Quellenrückverfolgbarkeit"
+      },
+      "conventionalValues": {
+        "premium": "Ja",
+        "coverage": "Unterschiedlich",
+        "exclusions": "Unterschiedlich",
+        "documents": "Unterschiedlich",
+        "preferences": "Unterschiedlich",
+        "explainable": "Unterschiedlich",
+        "clauseEvidence": "Unterschiedlich",
+        "traceability": "Unterschiedlich"
+      }
+    },
+    "footnote": "„Herkömmlicher Vergleichsansatz“ bezieht sich allgemein auf preisorientierte Vergleichsplattformen, nicht auf ein bestimmtes benanntes Produkt."
+  },
+  "about": {
+    "body": "InsureCompare.at hilft Ihnen, österreichische Versicherungen nicht nur nach dem Preis zu vergleichen – sondern auch nach Deckung, Ausschlüssen, Selbstbehalt und Belegen aus den Originaldokumenten – und Ihre eigenen Versicherungsunterlagen mit dem KI-Versicherungsberater besser zu verstehen."
+  }
+}

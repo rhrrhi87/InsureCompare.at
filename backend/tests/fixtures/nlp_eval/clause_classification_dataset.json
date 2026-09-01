@@ -1,0 +1,77 @@
+{
+  "_provenance": "CONTROLLED TEST EXAMPLES — NOT extracted from any real insurer document. Every sentence below was hand-authored for this evaluation, using realistic Austrian insurance phrasing patterns and terminology (matching the controlled vocabulary in app/nlp/extractor.py), to exercise each of the 10 ClauseType classes evenly. This dataset exists because the project has no genuinely-sourced real IPID/AVB documents to evaluate against (see docs/DATA_SOURCES.md) — using it is the only honest way to produce real, non-fabricated precision/recall/F1 numbers, as opposed to either skipping evaluation entirely or inventing metrics. See docs/NLP_EVALUATION.md.",
+  "created": "2026-08-28",
+  "author": "Claude (this session), for backend/scripts/evaluate_nlp.py",
+  "label_set": ["coverage", "exclusion", "limit", "deductible", "obligation", "definition", "territorial_scope", "duration", "optional_benefit", "other"],
+  "examples": [
+    {"text": "Versichert sind Schäden durch Diebstahl, Einbruch und Vandalismus am Wohnungsinhalt.", "label": "coverage"},
+    {"text": "Der Versicherer übernimmt die Kosten für Reparaturen infolge eines Sturmschadens am Gebäude.", "label": "coverage"},
+    {"text": "Die Kaskoversicherung deckt Schäden am eigenen Fahrzeug durch Kollision oder Wildunfall.", "label": "coverage"},
+    {"text": "Im Rahmen dieser Polizze sind Behandlungskosten im Ausland bis zur vereinbarten Höhe versichert.", "label": "coverage"},
+    {"text": "Die Haftpflichtversicherung ersetzt Personen- und Sachschäden, die Dritten durch den Versicherungsnehmer zugefügt werden.", "label": "coverage"},
+    {"text": "Glasbruchschäden an Fenstern und Verglasungen sind im Versicherungsschutz inkludiert.", "label": "coverage"},
+
+    {"text": "Schäden durch Kriegsereignisse oder innere Unruhen sind von der Versicherung ausgeschlossen.", "label": "exclusion"},
+    {"text": "Nicht versichert sind Schäden, die durch vorsätzliches Handeln des Versicherungsnehmers verursacht wurden.", "label": "exclusion"},
+    {"text": "Die Teilnahme an Motorsportveranstaltungen ist vom Versicherungsschutz ausgenommen.", "label": "exclusion"},
+    {"text": "Schäden infolge grober Fahrlässigkeit werden nicht ersetzt.", "label": "exclusion"},
+    {"text": "Ausgeschlossen sind Schäden, die auf Kernenergie oder radioaktive Strahlung zurückzuführen sind.", "label": "exclusion"},
+    {"text": "Für Schäden unter Alkohol- oder Drogeneinfluss besteht kein Versicherungsschutz.", "label": "exclusion"},
+
+    {"text": "Die Versicherungssumme für Haushaltsinhalt beträgt maximal EUR 100.000,00.", "label": "limit"},
+    {"text": "Die Entschädigung ist je Schadenfall mit EUR 5.000,00 begrenzt.", "label": "limit"},
+    {"text": "Für Wertgegenstände gilt eine Höchstentschädigung von EUR 10.000,00.", "label": "limit"},
+    {"text": "Die Deckungssumme für Personenschäden beläuft sich auf bis zu EUR 8.000.000,00.", "label": "limit"},
+    {"text": "Der Ersatz für Fahrraddiebstahl ist auf EUR 1.500,00 pro Gegenstand beschränkt.", "label": "limit"},
+    {"text": "Die maximale Versicherungsleistung für Reisegepäck beträgt EUR 2.000,00 pro Person.", "label": "limit"},
+
+    {"text": "Der Selbstbehalt beträgt EUR 300,00 pro Schadenfall.", "label": "deductible"},
+    {"text": "Die Selbstbeteiligung des Versicherungsnehmers beläuft sich auf 10 Prozent der Schadenssumme, mindestens jedoch EUR 150,00.", "label": "deductible"},
+    {"text": "Bei Glasbruchschäden entfällt der vereinbarte Selbstbehalt.", "label": "deductible"},
+    {"text": "Der Selbstbehalt für Sturmschäden beträgt EUR 250,00 je Ereignis.", "label": "deductible"},
+    {"text": "Im Schadenfall trägt der Versicherungsnehmer einen Selbstbehalt von EUR 500,00 selbst.", "label": "deductible"},
+    {"text": "Die Selbstbeteiligung erhöht sich bei grober Fahrlässigkeit auf EUR 1.000,00.", "label": "deductible"},
+
+    {"text": "Der Versicherungsnehmer ist verpflichtet, einen Schadenfall unverzüglich der Versicherung zu melden.", "label": "obligation"},
+    {"text": "Der Eintritt eines Diebstahls ist unverzüglich bei der nächsten Polizeidienststelle anzuzeigen.", "label": "obligation"},
+    {"text": "Der Versicherungsnehmer hat Änderungen des Risikos unverzüglich schriftlich bekanntzugeben.", "label": "obligation"},
+    {"text": "Nach einem Schadenfall besteht Meldepflicht binnen drei Tagen gegenüber dem Versicherer.", "label": "obligation"},
+    {"text": "Der Versicherungsnehmer muss den Schaden nach Möglichkeit mindern und Weisungen des Versicherers befolgen.", "label": "obligation"},
+    {"text": "Bei Verletzung der Anzeigepflicht kann der Versicherer die Leistung kürzen oder ablehnen.", "label": "obligation"},
+
+    {"text": "Im Sinne dieser Bedingungen gilt als Versicherungsfall jedes Ereignis, das einen Schaden verursacht.", "label": "definition"},
+    {"text": "Wohnungsinhalt im Sinne dieser Bedingungen umfasst alle beweglichen Sachen des privaten Haushalts.", "label": "definition"},
+    {"text": "Als Unfall gilt ein plötzlich von außen auf den Körper einwirkendes Ereignis.", "label": "definition"},
+    {"text": "Der Begriff Versicherungsnehmer bezeichnet die Person, die den Versicherungsvertrag abgeschlossen hat.", "label": "definition"},
+    {"text": "Grobe Fahrlässigkeit bedeutet im Sinne dieser Bedingungen ein besonders schwerwiegendes Verschulden.", "label": "definition"},
+    {"text": "Als Schadenereignis gilt der Zeitpunkt, zu dem der Schaden tatsächlich eingetreten ist.", "label": "definition"},
+
+    {"text": "Der Versicherungsschutz gilt innerhalb Europas im geographischen Sinn.", "label": "territorial_scope"},
+    {"text": "Der Geltungsbereich dieser Polizze erstreckt sich weltweit.", "label": "territorial_scope"},
+    {"text": "Diese Versicherung gilt ausschließlich innerhalb der Republik Österreich.", "label": "territorial_scope"},
+    {"text": "Der räumliche Geltungsbereich umfasst alle Mitgliedstaaten der Europäischen Union.", "label": "territorial_scope"},
+    {"text": "Außerhalb Europas besteht kein Versicherungsschutz, sofern nicht anders vereinbart.", "label": "territorial_scope"},
+    {"text": "Der Versicherungsschutz erstreckt sich auf Reisen innerhalb und außerhalb Österreichs bis zu 45 Tagen.", "label": "territorial_scope"},
+
+    {"text": "Der Versicherungsvertrag wird auf unbestimmte Zeit abgeschlossen und beginnt am 1. Jänner 2026.", "label": "duration"},
+    {"text": "Die Laufzeit der Polizze beträgt zwölf Monate ab Vertragsbeginn.", "label": "duration"},
+    {"text": "Der Vertrag verlängert sich automatisch um ein Jahr, sofern er nicht fristgerecht gekündigt wird.", "label": "duration"},
+    {"text": "Die Versicherungsdauer endet mit Ablauf des vereinbarten Versicherungsjahres.", "label": "duration"},
+    {"text": "Der Reiseversicherungsschutz beginnt mit Antritt der Reise und endet mit deren planmäßiger Beendigung.", "label": "duration"},
+    {"text": "Kündigungen sind spätestens drei Monate vor Ablauf der Vertragslaufzeit schriftlich einzureichen.", "label": "duration"},
+
+    {"text": "Gegen Mehrprämie kann ein Fahrradschutzbaustein zusätzlich eingeschlossen werden.", "label": "optional_benefit"},
+    {"text": "Der Rechtsschutz für Verkehrsangelegenheiten ist als Wahlleistung zubuchbar.", "label": "optional_benefit"},
+    {"text": "Optional kann der Versicherungsschutz um eine Auslandskrankenversicherung erweitert werden.", "label": "optional_benefit"},
+    {"text": "Der Baustein Elektronikversicherung ist gegen Aufpreis wählbar.", "label": "optional_benefit"},
+    {"text": "Zusätzlich zur Grunddeckung kann eine Reisegepäckversicherung optional abgeschlossen werden.", "label": "optional_benefit"},
+    {"text": "Der Kunde kann gegen Mehrprämie einen Rabattschutz hinzubuchen.", "label": "optional_benefit"},
+
+    {"text": "Diese Versicherungsbedingungen wurden von der Finanzmarktaufsicht zur Kenntnis genommen.", "label": "other"},
+    {"text": "Für Streitigkeiten aus diesem Vertrag ist österreichisches Recht anzuwenden.", "label": "other"},
+    {"text": "Der Versicherer behält sich das Recht vor, diese Bedingungen bei Gesetzesänderungen anzupassen.", "label": "other"},
+    {"text": "Diese Polizze wurde am 15. März 2026 von der Landesdirektion ausgestellt.", "label": "other"},
+    {"text": "Bei Fragen wenden Sie sich bitte an unser Kundenservice-Center.", "label": "other"},
+    {"text": "Die vorliegenden Bedingungen sind Bestandteil des Versicherungsvertrages.", "label": "other"}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "title": "Upload Insurance Document",
+  "subtitle": "Drop your PDF or photo. We'll OCR it, extract the clauses, and surface coverage and exclusions.",
+  "dropzone": {
+    "active": "Drop the file here",
+    "idle": "Drag & drop a PDF or image, or click to browse",
+    "hint": "PDF, JPEG or PNG, up to 10 MB. Only insurance documents please."
+  },
+  "processing": "Processing your document…",
+  "recentUploads": "Recent uploads",
+  "recentUploadsHint": "Most recent first.",
+  "empty": "No uploads yet. Drop a file above to get started.",
+  "status": {
+    "queued": "Queued",
+    "processing": "Processing",
+    "ready": "Ready",
+    "failed": "Failed"
+  },
+  "fields": {
+    "monthlyPremium": "Monthly premium",
+    "annualPremium": "Annual premium",
+    "deductible": "Deductible",
+    "coverageLimit": "Coverage limit",
+    "detectedCoverages": "Detected coverages",
+    "detectedExclusions": "Detected exclusions",
+    "clausesExtracted": "Clauses extracted",
+    "ocrConfidence": "OCR confidence"
+  },
+  "lowConfidenceWarning": "Low extraction confidence — please review the source clause.",
+  "moreClauses_one": "+{{count}} more clause",
+  "moreClauses_other": "+{{count}} more clauses"
+}

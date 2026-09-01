@@ -1,0 +1,58 @@
+{
+  "title": "Ihr KI-Versicherungsberater",
+  "productName": "KI-Versicherungsberater",
+  "overview": {
+    "heading": "Überblick über Ihre Versicherung",
+    "insurer": "Versicherer",
+    "insuranceType": "Versicherungsart",
+    "productName": "Produkt",
+    "mainCoverages": "Hauptdeckungen",
+    "importantExclusions": "Wichtige Ausschlüsse",
+    "deductible": "Selbstbehalt",
+    "coverageLimits": "Deckungsgrenzen",
+    "territorialScope": "Räumlicher Geltungsbereich",
+    "majorConditions": "Wesentliche Bedingungen"
+  },
+  "strengths": {
+    "heading": "Was ist bei dieser Versicherung positiv?"
+  },
+  "attentionPoints": {
+    "heading": "Worauf sollten Sie achten?"
+  },
+  "ask": {
+    "heading": "Fragen Sie Ihren Berater",
+    "placeholder": "Fragen Sie zu Ihrer Versicherung…",
+    "submit": "Fragen",
+    "examples": [
+      "Ist Diebstahl versichert?",
+      "Wie hoch ist mein Selbstbehalt?",
+      "Welche wichtigen Ausschlüsse gibt es?",
+      "Bin ich im Ausland versichert?",
+      "Ist Glasbruch versichert?",
+      "Welche Deckungsgrenzen gibt es?",
+      "Worauf sollte ich besonders achten?"
+    ]
+  },
+  "answer": {
+    "keyPoints": "Wichtige Punkte",
+    "attentionPoints": "Zu beachten",
+    "sourceEvidence": "Quellennachweis",
+    "unsupported": "Diese Information konnte aus dem hochgeladenen Dokument nicht eindeutig bestätigt werden."
+  },
+  "evidence": {
+    "page": "Seite {{page}}",
+    "confidence": "Konfidenz: {{value}}",
+    "original": "Originalklausel",
+    "provenance": {
+      "VERIFIED_SOURCE": "Verifizierte offizielle Quelle",
+      "DOCUMENT_EXTRACTED": "Aus diesem Dokument extrahiert",
+      "DERIVED": "Von der Software abgeleitet",
+      "DEMO_SYNTHETIC": "Demonstrationsdaten"
+    }
+  },
+  "unavailable": "Der KI-Versicherungsberater ist momentan nicht verfügbar. Die bereits extrahierten Versicherungsinformationen können weiterhin angezeigt werden.",
+  "note": "Die Analyse dient der verständlichen Aufbereitung der hochgeladenen Versicherungsunterlagen. Maßgeblich bleiben die Originalunterlagen und Versicherungsbedingungen.",
+  "loading": "Ihr Dokument wird analysiert…",
+  "noEvidenceYet": "Für dieses Dokument liegt noch keine Berater-Analyse vor.",
+  "regenerate": "Überblick neu erstellen"
+}

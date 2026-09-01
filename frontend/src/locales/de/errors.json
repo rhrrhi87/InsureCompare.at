@@ -1,0 +1,32 @@
+{
+  "notFound": {
+    "code": "404",
+    "title": "Seite nicht gefunden",
+    "body": "Die gesuchte Seite wurde verschoben oder existiert nicht."
+  },
+  "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+  "network": "Der Server konnte nicht erreicht werden. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+  "unauthorized": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
+  "forbidden": "Sie haben keine Berechtigung für diese Aktion.",
+  "notFoundEntity": "Nicht gefunden.",
+  "uploadTooLarge": "Datei zu groß. Die maximal zulässige Größe beträgt 10 MB.",
+  "unsupportedFileType": "Nicht unterstützter Dateityp. Bitte laden Sie eine PDF-, JPEG- oder PNG-Datei hoch.",
+  "policyNotFound": "Police nicht gefunden.",
+  "backend": {
+    "Invalid email or password": "E-Mail-Adresse oder Passwort ungültig",
+    "User account is inactive": "Dieses Konto wurde deaktiviert",
+    "A user with this email already exists": "Es besteht bereits ein Konto mit dieser E-Mail-Adresse",
+    "Missing or invalid Authorization header": "Bitte melden Sie sich an, um fortzufahren",
+    "Invalid token subject": "Ihre Sitzung ist ungültig – bitte melden Sie sich erneut an",
+    "User not found": "Konto nicht gefunden",
+    "Inactive user": "Dieses Konto wurde deaktiviert",
+    "Admin privileges required": "Administratorrechte erforderlich",
+    "Risk profile is missing. Please complete your preferences first.": "Bitte vervollständigen Sie zuerst Ihre Präferenzen, bevor Sie eine Empfehlung anfordern.",
+    "Compare 2 or 3 policies at a time.": "Bitte wählen Sie 2 oder 3 Policen zum Vergleich aus.",
+    "One or more policy IDs are invalid.": "Eine oder mehrere ausgewählte Policen konnten nicht gefunden werden.",
+    "Policy not found": "Police nicht gefunden",
+    "Provider not found": "Versicherer nicht gefunden",
+    "Upload not found": "Upload nicht gefunden",
+    "Risk profile not yet set": "Sie haben noch kein Risikoprofil eingerichtet"
+  }
+}

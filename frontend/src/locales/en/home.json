@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "titleLine1": "Understand your insurance.",
+    "titleLine2": "Not just the price.",
+    "subtitle": "Compare Austrian insurance products by coverage, exclusions, deductibles and price — with explainable AI-assisted analysis of insurance documents.",
+    "ctaPrimary": "Compare Insurance",
+    "ctaSecondary": "How It Works"
+  },
+  "features": {
+    "ai": {
+      "title": "AI-assisted analysis",
+      "body": "A transparent OCR and NLP pipeline extracts coverage, exclusions, deductibles and limits directly from insurance documents."
+    },
+    "comparison": {
+      "title": "Comprehensive comparison",
+      "body": "Compare price, coverage, exclusions, deductibles and risk level side-by-side for up to three policies."
+    },
+    "austria": {
+      "title": "Austrian insurers",
+      "body": "Catalogue coverage from UNIQA, Allianz Austria, Wiener Städtische, Generali Austria and Donau Versicherung."
+    }
+  },
+  "insuranceTypesTitle": "Available Insurance Types",
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": {
+      "upload": {
+        "title": "Upload or select",
+        "body": "Upload your own policy document, or select a policy from the demonstration catalogue."
+      },
+      "analysis": {
+        "title": "AI-assisted analysis",
+        "body": "Our OCR and NLP pipeline extracts coverage, exclusions, deductibles and limits from the document text."
+      },
+      "compare": {
+        "title": "Compare beyond price",
+        "body": "Compare up to three policies side-by-side on price, coverage, exclusions and deductible — not premium alone."
+      },
+      "understand": {
+        "title": "Understand the recommendation",
+        "body": "See exactly how each factor — coverage, price, exclusions, deductible, and profile fit — contributed to the score."
+      }
+    }
+  },
+  "whyInsureCompare": {
+    "title": "Beyond price comparison",
+    "subtitle": "A lower premium does not automatically mean a better fit. InsureCompare.at evaluates coverage, exclusions, deductibles, document evidence and your own preferences alongside price.",
+    "matrix": {
+      "dimension": "Dimension",
+      "conventional": "Conventional comparison approach",
+      "insurecompare": "InsureCompare.at",
+      "rows": {
+        "premium": "Premium comparison",
+        "coverage": "Coverage comparison",
+        "exclusions": "Exclusion analysis",
+        "documents": "Policy document analysis",
+        "preferences": "User preference matching",
+        "explainable": "Explainable scoring",
+        "clauseEvidence": "Clause-level evidence",
+        "traceability": "Source traceability"
+      },
+      "conventionalValues": {
+        "premium": "Yes",
+        "coverage": "Varies",
+        "exclusions": "Varies",
+        "documents": "Varies",
+        "preferences": "Varies",
+        "explainable": "Varies",
+        "clauseEvidence": "Varies",
+        "traceability": "Varies"
+      }
+    },
+    "footnote": "\"Conventional comparison approach\" refers to price-led aggregator platforms generally, not a specific named product."
+  },
+  "about": {
+    "body": "InsureCompare.at helps you compare Austrian insurance policies on more than price — coverage, exclusions, deductibles and document evidence — and understand your own insurance documents with the AI Policy Advisor."
+  }
+}

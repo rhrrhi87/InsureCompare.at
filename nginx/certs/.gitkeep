@@ -1,0 +1,2 @@
+# Generated certificates live here. Excluded from VCS; run
+# ./nginx/generate-dev-certs.sh to populate locally.

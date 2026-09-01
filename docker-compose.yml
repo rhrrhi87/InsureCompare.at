@@ -1,0 +1,125 @@
+# File: docker-compose.yml
+# Brings up the full InsureCompare.at stack: Postgres, FastAPI backend,
+# Vite-built frontend served by Nginx, and an edge reverse-proxy.
+
+services:
+  # ---------------------------------------------------------------------------
+  # Database
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:16-alpine
+    container_name: insurecompare-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks: [internal]
+
+  # ---------------------------------------------------------------------------
+  # Backend (FastAPI)
+  # ---------------------------------------------------------------------------
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: insurecompare/api:1.0.0
+    container_name: insurecompare-api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_ACCESS_TOKEN_MINUTES: ${JWT_ACCESS_TOKEN_MINUTES:-30}
+      JWT_REFRESH_TOKEN_DAYS: ${JWT_REFRESH_TOKEN_DAYS:-14}
+      RATE_LIMIT_PER_MINUTE: ${RATE_LIMIT_PER_MINUTE:-60}
+      MAX_UPLOAD_BYTES: ${MAX_UPLOAD_BYTES:-10485760}
+      BACKEND_CORS_ORIGINS: ${BACKEND_CORS_ORIGINS}
+      SPACY_MODEL: ${SPACY_MODEL:-de_core_news_lg}
+      GBERT_MODEL: ${GBERT_MODEL:-Sahajtomar/German_Zeroshot}
+      OCR_LANGUAGE: ${OCR_LANGUAGE:-deu}
+      SEED_DEMO_USER_EMAIL: ${SEED_DEMO_USER_EMAIL}
+      SEED_DEMO_USER_PASSWORD: ${SEED_DEMO_USER_PASSWORD}
+      SEED_DEMO_ADMIN_EMAIL: ${SEED_DEMO_ADMIN_EMAIL}
+      SEED_DEMO_ADMIN_PASSWORD: ${SEED_DEMO_ADMIN_PASSWORD}
+    networks: [internal]
+    expose: ["8000"]
+
+  # ---------------------------------------------------------------------------
+  # Seed script (runs once after the API container is healthy)
+  # ---------------------------------------------------------------------------
+  seed:
+    image: insurecompare/api:1.0.0
+    container_name: insurecompare-seed
+    depends_on:
+      api:
+        condition: service_started
+      db:
+        condition: service_healthy
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      JWT_SECRET: ${JWT_SECRET}
+      SEED_DEMO_USER_EMAIL: ${SEED_DEMO_USER_EMAIL}
+      SEED_DEMO_USER_PASSWORD: ${SEED_DEMO_USER_PASSWORD}
+      SEED_DEMO_ADMIN_EMAIL: ${SEED_DEMO_ADMIN_EMAIL}
+      SEED_DEMO_ADMIN_PASSWORD: ${SEED_DEMO_ADMIN_PASSWORD}
+    networks: [internal]
+    command: ["python", "-m", "scripts.seed"]
+    restart: "no"
+
+  # ---------------------------------------------------------------------------
+  # Frontend (built React SPA served by Nginx inside the container)
+  # ---------------------------------------------------------------------------
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: insurecompare/web:1.0.0
+    container_name: insurecompare-web
+    restart: unless-stopped
+    networks: [internal]
+    expose: ["80"]
+    depends_on: [api]
+
+  # ---------------------------------------------------------------------------
+  # Edge reverse proxy (TLS termination + routing)
+  # ---------------------------------------------------------------------------
+  proxy:
+    image: nginx:1.27-alpine
+    container_name: insurecompare-proxy
+    restart: unless-stopped
+    depends_on: [web, api]
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks: [internal]
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  pgdata:
+
+networks:
+  internal:
+    driver: bridge

@@ -1,0 +1,60 @@
+{
+  "title": "Benutzer-Dashboard",
+  "subtitle": "Legen Sie Ihre Präferenzen fest, um personalisierte Versicherungsempfehlungen zu erhalten",
+  "actionCards": {
+    "upload": { "title": "Police hochladen", "subtitle": "Laden Sie Ihr PDF-Dokument hoch" },
+    "compare": { "title": "Policen vergleichen", "subtitle": "Vergleich nebeneinander anzeigen" },
+    "recommend": { "title": "KI-Empfehlungen", "subtitle": "Intelligente Vorschläge erhalten" },
+    "demo": { "title": "Demodaten", "subtitle": "Beispielpolicen ansehen" }
+  },
+  "preferences": {
+    "title": "Ihre Präferenzen",
+    "subtitle": "Die Empfehlungsengine verwendet diese zusammen mit Ihrem Budget, um Policen zu bewerten.",
+    "insuranceType": "Versicherungsart",
+    "monthlyBudget": "Monatsbudget ({{amount}})",
+    "riskTolerance": "Risikobereitschaft",
+    "coverageLevel": "Bevorzugtes Deckungsniveau",
+    "deductiblePreference": "Selbstbehalt-Präferenz",
+    "save": "Präferenzen speichern",
+    "getRecommendations": "KI-Empfehlungen anzeigen →",
+    "advanced": {
+      "toggle": "Erweiterte Gewichtungseinstellungen",
+      "hint": "Überschreiben Sie die Standardgewichtungen. Die Summe muss 100 % ergeben.",
+      "total": "Summe: {{total}} %",
+      "totalError": "Die Gewichtungen müssen vor dem Speichern 100 % ergeben.",
+      "resetDefaults": "Auf Standardwerte zurücksetzen"
+    },
+    "requiredCoverages": {
+      "label": "Erforderliche Deckungen (optional)",
+      "hint": "Wählen Sie Deckungsarten aus, die Sie ausdrücklich benötigen."
+    }
+  },
+  "policyDetail": {
+    "coverageDetails": "Deckungsdetails",
+    "noCoverageItems": "Keine Deckungspositionen erfasst.",
+    "additionalFeatures": "Zusatzleistungen",
+    "exclusionsTitle": "Versicherungsausschlüsse",
+    "exclusionsHint": "Die folgenden Situationen sind durch diese Police NICHT gedeckt:",
+    "noExclusions": "Keine Ausschlüsse erfasst.",
+    "summary": "Policenübersicht",
+    "basicInfo": "Grundlegende Informationen",
+    "financialDetails": "Finanzielle Details",
+    "policyType": "Policenart",
+    "insurer": "Versicherer",
+    "notFound": "Police nicht gefunden.",
+    "backToRecommendations": "Zurück zu den Empfehlungen",
+    "compareWithOthers": "Mit anderen Policen vergleichen",
+    "viewRecommendations": "KI-Empfehlungen anzeigen",
+    "perMonth": "pro Monat",
+    "annually": "{{amount}} jährlich",
+    "deductibleHint": "Betrag, den Sie vor Einsetzen der Deckung selbst tragen",
+    "coverageLimitHint": "Maximaler Deckungsbetrag",
+    "coverageItemsHint": "Enthaltene Deckungsarten",
+    "sourceEvidence": "Quellenbeleg",
+    "sourceEvidenceHint": "Die Originalklauseln, auf denen dieser Eintrag basiert, mit Seitenzahl und Erkennungssicherheit.",
+    "noEvidenceDemo": "Dies sind Demonstrationsdaten aus dem Katalog ohne hinterlegtes Quelldokument. Laden Sie Ihre eigene Police auf der Seite „Police hochladen“ hoch, um klauselgenaue Belege aus einem echten Dokument zu sehen.",
+    "evidencePage": "Seite {{page}}",
+    "evidenceConfidence": "Erkennungssicherheit: {{value}}",
+    "demoDataBadge": "Demonstrationsdaten"
+  }
+}

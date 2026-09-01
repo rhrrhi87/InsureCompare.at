@@ -1,0 +1,42 @@
+{
+  "landing_page": {
+    "violations": 0,
+    "details": []
+  },
+  "login_page": {
+    "violations": 0,
+    "details": []
+  },
+  "register_page": {
+    "violations": 0,
+    "details": []
+  },
+  "dashboard": {
+    "violations": 0,
+    "details": []
+  },
+  "compare_page": {
+    "violations": 0,
+    "details": []
+  },
+  "recommendations_page": {
+    "violations": 0,
+    "details": []
+  },
+  "upload_page": {
+    "violations": 0,
+    "details": []
+  },
+  "upload_page_advisor_expanded": {
+    "violations": 0,
+    "details": []
+  },
+  "admin_providers_page": {
+    "violations": 0,
+    "details": []
+  },
+  "admin_policies_page": {
+    "violations": 0,
+    "details": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "appName": "InsureCompare.at",
+  "tagline": "Understand your insurance. Not just the price.",
+  "language": {
+    "en": "English",
+    "de": "Deutsch",
+    "switchTo": "Switch language"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "backToHome": "Back to home",
+    "backToDashboard": "Back to Dashboard",
+    "viewDetails": "View Details",
+    "viewFullDetails": "View Full Policy Details",
+    "getStarted": "Get Started",
+    "signIn": "Sign In",
+    "signOut": "Logout",
+    "reset": "Reset",
+    "continue": "Continue"
+  },
+  "status": {
+    "loading": "Loading…",
+    "yes": "Yes",
+    "no": "No",
+    "notAvailable": "—"
+  },
+  "footer": {
+    "copyright": "© {{year}} InsureCompare.at",
+    "tagline": "Compare insurance transparently and understand it better.",
+    "legalLink": "Legal Information"
+  },
+  "legal": {
+    "title": "Legal Information",
+    "intro": "InsureCompare.at is an insurance comparison and information platform.",
+    "notice": "InsureCompare.at does not provide binding insurance quotations, does not conclude insurance contracts, and does not provide regulated financial advice. Product and pricing information must always be verified against the insurer's current official documentation."
+  },
+  "demoData": {
+    "label": "Demonstration data",
+    "premium": "Demonstration premium"
+  }
+}

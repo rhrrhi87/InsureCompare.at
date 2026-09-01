@@ -1,0 +1,12 @@
+node_modules
+dist
+.vite
+.env
+.env.*
+playwright-report
+test-results
+coverage
+.eslintcache
+.turbo
+.git
+.github

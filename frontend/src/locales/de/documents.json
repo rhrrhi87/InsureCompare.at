@@ -1,0 +1,32 @@
+{
+  "title": "Versicherungsdokument hochladen",
+  "subtitle": "Laden Sie Ihr PDF oder Foto hoch. Wir führen eine OCR-Erkennung durch, extrahieren die Klauseln und zeigen Deckung und Ausschlüsse an.",
+  "dropzone": {
+    "active": "Datei hier ablegen",
+    "idle": "PDF oder Bild per Drag & Drop ablegen oder klicken zum Durchsuchen",
+    "hint": "PDF, JPEG oder PNG, bis zu 10 MB. Bitte nur Versicherungsdokumente."
+  },
+  "processing": "Ihr Dokument wird verarbeitet…",
+  "recentUploads": "Letzte Uploads",
+  "recentUploadsHint": "Neueste zuerst.",
+  "empty": "Noch keine Uploads. Legen Sie oben eine Datei ab, um zu beginnen.",
+  "status": {
+    "queued": "In Warteschlange",
+    "processing": "In Bearbeitung",
+    "ready": "Fertig",
+    "failed": "Fehlgeschlagen"
+  },
+  "fields": {
+    "monthlyPremium": "Monatsprämie",
+    "annualPremium": "Jahresprämie",
+    "deductible": "Selbstbehalt",
+    "coverageLimit": "Deckungssumme",
+    "detectedCoverages": "Erkannte Deckungen",
+    "detectedExclusions": "Erkannte Ausschlüsse",
+    "clausesExtracted": "Extrahierte Klauseln",
+    "ocrConfidence": "OCR-Erkennungssicherheit"
+  },
+  "lowConfidenceWarning": "Niedrige Erkennungssicherheit – bitte prüfen Sie die Originalklausel.",
+  "moreClauses_one": "+{{count}} weitere Klausel",
+  "moreClauses_other": "+{{count}} weitere Klauseln"
+}

@@ -1,0 +1,16 @@
+{
+  "home": "Startseite",
+  "insuranceTypes": "Versicherungsarten",
+  "howItWorks": "So funktioniert's",
+  "whyInsureCompare": "Warum InsureCompare",
+  "about": "Über uns",
+  "login": "Anmelden",
+  "register": "Jetzt starten",
+  "dashboard": "Dashboard",
+  "uploadPolicy": "Versicherungspolizze hochladen",
+  "recommendations": "Empfehlungen",
+  "compare": "Vergleich",
+  "adminDashboard": "Admin-Dashboard",
+  "adminBadge": "Admin",
+  "welcome": "Willkommen, {{name}}"
+}

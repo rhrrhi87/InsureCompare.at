@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "providers": "Providers",
+    "policies": "Policies",
+    "documents": "Documents",
+    "audit": "Audit"
+  },
+  "title": "Admin Dashboard",
+  "subtitle": "System overview and management",
+  "kpi": {
+    "totalUsers": "Total Users",
+    "totalPolicies": "Total Policies",
+    "totalUploads": "User Uploads",
+    "totalRecommendations": "Recommendations",
+    "activeHint": "Active",
+    "catalogueHint": "Catalogue",
+    "documentsHint": "Documents",
+    "aiHint": "AI"
+  },
+  "userManagement": {
+    "title": "User Management",
+    "empty": "No users yet.",
+    "joined": "Joined: {{date}}"
+  },
+  "recentActivity": {
+    "title": "Recent Activity",
+    "empty": "No recent activity.",
+    "system": "system"
+  },
+  "insurers": {
+    "title": "Registered Insurers ({{count}})",
+    "policiesCount": "{{count}} policies"
+  },
+  "policyDistribution": {
+    "title": "Policy Distribution by Type",
+    "ofTotal": "{{percent}}% of total"
+  },
+  "systemInfo": {
+    "title": "System Information",
+    "version": "Version",
+    "environment": "Environment",
+    "lastUpdated": "Last Updated"
+  },
+  "policies": {
+    "title": "Policy Management",
+    "create": "New Policy",
+    "edit": "Edit Policy",
+    "retire": "Retire",
+    "reactivate": "Reactivate",
+    "retireConfirm": "Retire this policy? It will no longer be offered in comparisons or recommendations, but historical recommendations that used it are preserved.",
+    "statusActive": "Active",
+    "statusRetired": "Retired",
+    "filterStatus": "Status",
+    "filterLine": "Product line",
+    "search": "Search policies…",
+    "columns": { "name": "Name", "provider": "Provider", "line": "Line", "premium": "Monthly premium", "status": "Status", "actions": "Actions" }
+  },
+  "providers": {
+    "title": "Provider Management",
+    "create": "New Provider",
+    "edit": "Edit Provider",
+    "columns": { "name": "Name", "country": "Country", "rating": "Rating", "policies": "Policies", "actions": "Actions" }
+  },
+  "documents": {
+    "title": "Document Review",
+    "columns": { "user": "User", "filename": "File", "status": "Status", "confidence": "OCR confidence", "uploaded": "Uploaded" },
+    "lowConfidenceFlag": "Low confidence"
+  },
+  "audit": {
+    "title": "Audit Log",
+    "columns": { "action": "Action", "actor": "Actor", "entity": "Entity", "when": "When" },
+    "empty": "No audit events yet."
+  }
+}

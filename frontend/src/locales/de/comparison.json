@@ -1,0 +1,30 @@
+{
+  "title": "Versicherungsvergleich",
+  "subtitle": "Wählen Sie 2-3 Policen derselben Versicherungsart aus und vergleichen Sie diese nebeneinander.",
+  "productLineLabel": "Versicherungsart:",
+  "selectedCount": "Ausgewählt: {{count}} / 3",
+  "compareButton": "Vergleichen",
+  "compareButtonWithCount": "{{count}} Policen vergleichen",
+  "availablePolicies": "Verfügbare Policen",
+  "comparingCount": "Vergleich von {{count}} Policen ({{line}})",
+  "noPolicies": "Für diese Versicherungsart sind keine Policen verfügbar.",
+  "table": {
+    "pick": "Auswahl",
+    "insurer": "Versicherer",
+    "policyName": "Policenname",
+    "monthlyPremium": "Monatsprämie",
+    "deductible": "Selbstbehalt",
+    "coverageLimit": "Deckungssumme",
+    "riskLevel": "Risikostufe",
+    "coverageItems": "Deckungsumfang",
+    "actions": "Aktionen",
+    "itemsCount": "{{count}} Positionen"
+  },
+  "summary": {
+    "cheapest": "Günstigste Monatsprämie",
+    "average": "Durchschnittliche Monatsprämie",
+    "withinBudget": "Im Budget",
+    "lowRisk": "Optionen mit niedrigem Risiko"
+  },
+  "getRecommendations": "KI-Empfehlungen anzeigen"
+}

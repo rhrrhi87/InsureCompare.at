@@ -1,0 +1,46 @@
+{
+  "resultsTitle": "AI Recommendation Results",
+  "resultsSubtitle": "Based on your preferences for {{line}} insurance with a {{budget}} monthly budget",
+  "completeProfilePrompt": "Please complete your preferences first.",
+  "goToDashboard": "Go to dashboard",
+  "calculating": "Calculating your AI recommendations…",
+  "bestMatch": {
+    "title": "Best Match for You",
+    "subtitle": "Our AI recommends this policy based on your preferences",
+    "perMonth": "per month",
+    "outOf100": "/ 100"
+  },
+  "allRanked": "All Policies Ranked",
+  "totalScore": "Total score",
+  "feature": {
+    "price": "Price",
+    "coverage": "Coverage",
+    "exclusion": "Exclusions",
+    "deductible": "Deductible",
+    "fit": "Preference Match"
+  },
+  "featureWeight": "({{weight}}%)",
+  "sensitivity": {
+    "title": "What could change this result?",
+    "change": "If {{feature}} importance changed from {{current}}% to {{suggested}}%, {{alternative}} would become the top-ranked policy instead of {{currentPolicy}}. The other weights are rescaled proportionally.",
+    "projected": "Projected scores: {{alternative}} {{alternativeScore}}; {{currentPolicy}} {{currentScore}}.",
+    "method": "This is a deterministic sensitivity calculation over 1-percentage-point changes between 5% and 80%. Gemini does not calculate or change the ranking."
+  },
+  "methodology": {
+    "title": "AI Scoring Methodology",
+    "intro": "Our AI recommendation engine evaluates policies across five weighted factors to calculate a suitability score from 0-100:",
+    "price": { "label": "Price Score", "hint": "How well the premium fits your budget" },
+    "coverage": { "label": "Coverage Score", "hint": "Comprehensiveness of coverage and features" },
+    "exclusion": { "label": "Exclusion Score", "hint": "Number and impact of policy exclusions" },
+    "deductible": { "label": "Deductible Score", "hint": "Match with your deductible preference" },
+    "fit": { "label": "Preference Match", "hint": "Alignment with risk tolerance and coverage level" }
+  },
+  "whyThisResult": {
+    "title": "Why this result",
+    "factor": "Factor",
+    "weight": "Weight",
+    "subscore": "Sub-score",
+    "contribution": "Contribution",
+    "viewEvidence": "View source evidence"
+  }
+}

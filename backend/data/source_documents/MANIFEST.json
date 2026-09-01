@@ -1,0 +1,54 @@
+{
+  "_note": "Real, official Austrian insurer documents downloaded directly from the insurer's own domain (or its CDN, linked from the insurer's own page). Nothing here is generated, fabricated, or transcribed by hand — every file is the exact byte-for-byte PDF the insurer publishes. Retrieved 2026-08-28.",
+  "_redistribution_note": "The PDFs themselves are NOT committed to this repository — redistribution permission for third-party insurer PDFs is unclear, even though the documents are freely publicly accessible (see docs/DATA_PROVENANCE_AUDIT.md §8). This manifest, the sha256 checksum of each real file, and backend/scripts/download_source_documents.py together make the documents fully reproducible from their official source without redistributing them.",
+  "documents": [
+    {
+      "filename": "uniqa_kfz_haftpflicht_ipid.pdf",
+      "insurer": "UNIQA Österreich Versicherungen AG",
+      "product_line": "car",
+      "product_name": "Auto & Frei",
+      "document_type": "IPID",
+      "document_title": "Kfz-Haftpflichtversicherung – Informationsblatt zu Versicherungsprodukten",
+      "document_version_date": "07.2024",
+      "source_url": "https://www.uniqa.at/versicherung/f/172351/x/297ae8c004/uat_ipid_kfz-haftpflicht.pdf",
+      "source_page": "https://www.uniqa.at/versicherung/kfz/haftpflichtversicherung",
+      "retrieval_date": "2026-08-28",
+      "retrieval_method": "Located via web search, confirmed on uniqa.at's own domain, downloaded directly with curl (HTTP 200, valid PDF v1.6).",
+      "document_language": "de",
+      "sha256": "ef9a38da7ea6396ffbd03e0ed96a6bc805bac9baeda74bcc152bce75345408b7",
+      "size_bytes": 219504
+    },
+    {
+      "filename": "generali_haushalt_ipid.pdf",
+      "insurer": "Generali Versicherung AG",
+      "product_line": "household",
+      "product_name": "Haushaltversicherung",
+      "document_type": "IPID",
+      "document_title": "Haushaltversicherung – Informationsblatt zu Versicherungsprodukten",
+      "document_version_date": "12/2024",
+      "source_url": "https://eu-assets.contentstack.com/v3/assets/bltcba55c71291ad2c3/bltfb3bd52b0f306349/6748380568a04481a9d207cc/IPID_SachHaushalt_244001.pdf",
+      "source_page": "https://www.generali.at/privatkunden/zuhause/kundeninformationsblaetter/",
+      "retrieval_date": "2026-08-28",
+      "retrieval_method": "The generali.at page was rendered in a real browser session and the live PDF link was read directly out of the rendered DOM (an earlier search-engine-cached URL for this document was stale and 404s); downloaded directly with curl (HTTP 200, valid PDF v1.4).",
+      "document_language": "de",
+      "sha256": "1dbf8331f4fe2d2b369a50fe0bd1493d3a473187ad1ed6477e9d2a5361949721",
+      "size_bytes": 167113
+    },
+    {
+      "filename": "wienerstaedtische_rechtsschutz_ipid.pdf",
+      "insurer": "WIENER STÄDTISCHE Versicherung AG – Vienna Insurance Group",
+      "product_line": "legal",
+      "product_name": "Rechtsschutzversicherung",
+      "document_type": "IPID",
+      "document_title": "Rechtsschutzversicherung – Informationsblatt zu Versicherungsprodukten",
+      "document_version_date": "April 2020",
+      "source_url": "https://www.wienerstaedtische.at/fileadmin/user_upload/Dokumente/IPID/IPID_NKS_Rechtsschutzversicherung.pdf",
+      "source_page": "https://www.wienerstaedtische.at/versicherungen/privatkunden/haftung-recht/rechtsschutzversicherung.html",
+      "retrieval_date": "2026-08-28",
+      "retrieval_method": "Located via web search, confirmed on wienerstaedtische.at's own domain, downloaded directly with curl (HTTP 200, valid PDF v1.5, 2 pages).",
+      "document_language": "de",
+      "sha256": "30f13da6e08aa8b3cf9e89ad222e261b558e1c2eec28559f5a8f54f1c4310ce7",
+      "size_bytes": 111132
+    }
+  ]
+}

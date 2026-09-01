@@ -1,0 +1,58 @@
+{
+  "title": "Your AI Policy Advisor",
+  "productName": "AI Policy Advisor",
+  "overview": {
+    "heading": "Policy Overview",
+    "insurer": "Insurer",
+    "insuranceType": "Insurance Type",
+    "productName": "Product",
+    "mainCoverages": "Main coverages",
+    "importantExclusions": "Important exclusions",
+    "deductible": "Deductible",
+    "coverageLimits": "Coverage limits",
+    "territorialScope": "Territorial scope",
+    "majorConditions": "Major conditions"
+  },
+  "strengths": {
+    "heading": "What is good about this policy?"
+  },
+  "attentionPoints": {
+    "heading": "What should you pay attention to?"
+  },
+  "ask": {
+    "heading": "Ask your Advisor",
+    "placeholder": "Ask about your policy…",
+    "submit": "Ask",
+    "examples": [
+      "Is theft covered?",
+      "What is my deductible?",
+      "What are the main exclusions?",
+      "Am I covered abroad?",
+      "Is glass damage covered?",
+      "What are my coverage limits?",
+      "What should I pay particular attention to?"
+    ]
+  },
+  "answer": {
+    "keyPoints": "Key points",
+    "attentionPoints": "Attention points",
+    "sourceEvidence": "Source Evidence",
+    "unsupported": "This information could not be confirmed from the uploaded document."
+  },
+  "evidence": {
+    "page": "Page {{page}}",
+    "confidence": "Confidence: {{value}}",
+    "original": "Original clause",
+    "provenance": {
+      "VERIFIED_SOURCE": "Verified official source",
+      "DOCUMENT_EXTRACTED": "Extracted from this document",
+      "DERIVED": "Derived by the software",
+      "DEMO_SYNTHETIC": "Demonstration data"
+    }
+  },
+  "unavailable": "The AI Policy Advisor is currently unavailable. The already extracted policy information remains available.",
+  "note": "The analysis is intended to help explain the uploaded insurance documents. The original policy documents and insurance terms remain authoritative.",
+  "loading": "Analysing your document…",
+  "noEvidenceYet": "No Advisor analysis is available for this document yet.",
+  "regenerate": "Regenerate summary"
+}

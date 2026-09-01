@@ -1,0 +1,30 @@
+{
+  "title": "Policy Comparison",
+  "subtitle": "Pick 2-3 policies in the same product line and compare them side by side.",
+  "productLineLabel": "Product line:",
+  "selectedCount": "Selected: {{count}} / 3",
+  "compareButton": "Compare",
+  "compareButtonWithCount": "Compare {{count}} Policies",
+  "availablePolicies": "Available policies",
+  "comparingCount": "Comparing {{count}} {{line}} policies",
+  "noPolicies": "No policies available in this product line.",
+  "table": {
+    "pick": "Pick",
+    "insurer": "Insurer",
+    "policyName": "Policy Name",
+    "monthlyPremium": "Monthly Premium",
+    "deductible": "Deductible",
+    "coverageLimit": "Coverage Limit",
+    "riskLevel": "Risk Level",
+    "coverageItems": "Coverage Items",
+    "actions": "Actions",
+    "itemsCount": "{{count}} items"
+  },
+  "summary": {
+    "cheapest": "Cheapest Monthly",
+    "average": "Average Monthly",
+    "withinBudget": "Within Budget",
+    "lowRisk": "Low Risk Options"
+  },
+  "getRecommendations": "Get AI Recommendations"
+}

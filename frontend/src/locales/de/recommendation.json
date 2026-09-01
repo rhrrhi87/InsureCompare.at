@@ -1,0 +1,46 @@
+{
+  "resultsTitle": "KI-Empfehlungsergebnisse",
+  "resultsSubtitle": "Basierend auf Ihren Präferenzen für {{line}} mit einem Monatsbudget von {{budget}}",
+  "completeProfilePrompt": "Bitte vervollständigen Sie zuerst Ihre Präferenzen.",
+  "goToDashboard": "Zum Dashboard",
+  "calculating": "Ihre KI-Empfehlungen werden berechnet…",
+  "bestMatch": {
+    "title": "Beste Übereinstimmung für Sie",
+    "subtitle": "Unsere KI empfiehlt diese Police basierend auf Ihren Präferenzen",
+    "perMonth": "pro Monat",
+    "outOf100": "/ 100"
+  },
+  "allRanked": "Alle Policen im Ranking",
+  "totalScore": "Gesamtbewertung",
+  "feature": {
+    "price": "Preis",
+    "coverage": "Deckung",
+    "exclusion": "Ausschlüsse",
+    "deductible": "Selbstbehalt",
+    "fit": "Präferenzübereinstimmung"
+  },
+  "featureWeight": "({{weight}}%)",
+  "sensitivity": {
+    "title": "Was könnte dieses Ergebnis ändern?",
+    "change": "Wenn die Bedeutung von {{feature}} von {{current}}% auf {{suggested}}% geändert würde, wäre {{alternative}} statt {{currentPolicy}} die erstplatzierte Polizze. Die übrigen Gewichtungen werden proportional angepasst.",
+    "projected": "Projizierte Bewertungen: {{alternative}} {{alternativeScore}}; {{currentPolicy}} {{currentScore}}.",
+    "method": "Dies ist eine deterministische Sensitivitätsberechnung in Ein-Prozentpunkt-Schritten zwischen 5% und 80%. Gemini berechnet oder verändert das Ranking nicht."
+  },
+  "methodology": {
+    "title": "KI-Bewertungsmethodik",
+    "intro": "Unsere KI-Empfehlungsengine bewertet Policen anhand von fünf gewichteten Faktoren, um eine Eignungsbewertung von 0-100 zu berechnen:",
+    "price": { "label": "Preisbewertung", "hint": "Wie gut die Prämie zu Ihrem Budget passt" },
+    "coverage": { "label": "Deckungsbewertung", "hint": "Umfang der Deckung und Leistungen" },
+    "exclusion": { "label": "Ausschlussbewertung", "hint": "Anzahl und Auswirkung der Versicherungsausschlüsse" },
+    "deductible": { "label": "Selbstbehaltsbewertung", "hint": "Übereinstimmung mit Ihrer Selbstbehalt-Präferenz" },
+    "fit": { "label": "Präferenzübereinstimmung", "hint": "Übereinstimmung mit Risikobereitschaft und Deckungsniveau" }
+  },
+  "whyThisResult": {
+    "title": "Warum dieses Ergebnis?",
+    "factor": "Faktor",
+    "weight": "Gewichtung",
+    "subscore": "Teilbewertung",
+    "contribution": "Beitrag",
+    "viewEvidence": "Quelldokument anzeigen"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_provenance": "CONTROLLED TEST EXAMPLES — hand-authored to exercise the controlled coverage/exclusion vocabulary in app/nlp/extractor.py (_COVERAGE_VOCAB / _EXCLUSION_VOCAB). Not from any real insurer document.",
+  "created": "2026-08-28",
+  "examples": [
+    {"text": "Versichert sind Diebstahl, Sturm und Glasbruch im Haushalt.", "true_coverages": ["Theft protection", "Storm damage", "Glass breakage"], "true_exclusions": []},
+    {"text": "Ausgeschlossen sind Schäden durch Kernenergie und Vorsatz.", "true_coverages": [], "true_exclusions": ["Nuclear events", "Intentional damage"]},
+    {"text": "Die Kaskoversicherung deckt Vollkasko- und Teilkaskoschäden am Fahrzeug.", "true_coverages": ["Comprehensive coverage", "Partial comprehensive coverage"], "true_exclusions": []},
+    {"text": "Schäden durch grobe Fahrlässigkeit oder Rennveranstaltungen sind nicht versichert.", "true_coverages": [], "true_exclusions": ["Gross negligence", "Racing events"]},
+    {"text": "Der Reiseschutz umfasst Reisegepäck und Stornokosten.", "true_coverages": ["Travel luggage", "Trip cancellation"], "true_exclusions": []},
+    {"text": "Die Haftpflichtversicherung schützt vor Schäden durch Feuer und Wasser.", "true_coverages": ["Liability coverage", "Fire damage", "Water damage"], "true_exclusions": []},
+    {"text": "Nicht versichert sind Schäden unter Alkohol- oder Drogeneinfluss.", "true_coverages": [], "true_exclusions": ["Alcohol-related incidents", "Drug-related incidents"]},
+    {"text": "Der Rechtsschutz und der Diebstahlschutz für das Fahrrad sind inkludiert.", "true_coverages": ["Legal protection", "Bicycle theft"], "true_exclusions": []}
+  ]
+}

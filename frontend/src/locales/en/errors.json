@@ -1,0 +1,32 @@
+{
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "body": "The page you are looking for has been moved or never existed."
+  },
+  "generic": "Something went wrong. Please try again.",
+  "network": "Could not reach the server. Please check your connection and try again.",
+  "unauthorized": "Your session has expired. Please sign in again.",
+  "forbidden": "You do not have permission to do that.",
+  "notFoundEntity": "Not found.",
+  "uploadTooLarge": "File too large. Maximum allowed size is 10 MB.",
+  "unsupportedFileType": "Unsupported file type. Please upload a PDF, JPEG or PNG.",
+  "policyNotFound": "Policy not found.",
+  "backend": {
+    "Invalid email or password": "Invalid email or password",
+    "User account is inactive": "This account has been deactivated",
+    "A user with this email already exists": "An account with this email already exists",
+    "Missing or invalid Authorization header": "You need to sign in to do that",
+    "Invalid token subject": "Your session is invalid — please sign in again",
+    "User not found": "Account not found",
+    "Inactive user": "This account has been deactivated",
+    "Admin privileges required": "Administrator access required",
+    "Risk profile is missing. Please complete your preferences first.": "Please complete your preferences before requesting a recommendation.",
+    "Compare 2 or 3 policies at a time.": "Please select 2 or 3 policies to compare.",
+    "One or more policy IDs are invalid.": "One or more selected policies could not be found.",
+    "Policy not found": "Policy not found",
+    "Provider not found": "Provider not found",
+    "Upload not found": "Upload not found",
+    "Risk profile not yet set": "You haven't set up your risk profile yet"
+  }
+}

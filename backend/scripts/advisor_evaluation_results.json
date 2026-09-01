@@ -1,0 +1,507 @@
+{
+  "status": "VERIFIED_WITH_MOCK_PROVIDER",
+  "run_timestamp_utc": "2026-08-30T16:02:42.007626+00:00",
+  "provider": "mock",
+  "source": {
+    "source_document": "uniqa_kfz_haftpflicht_ipid.pdf",
+    "source_description": "Official UNIQA Kfz-Haftpflicht IPID listed in backend/data/source_documents/MANIFEST.json.",
+    "labelling_method": "Questions and expected evidence terms were hand-labelled against the text of the official two-page IPID. Unsupported questions intentionally use concepts absent from that document.",
+    "language": "de"
+  },
+  "database_selection": {
+    "upload_id": 15,
+    "filename": "uniqa_kfz_haftpflicht_ipid.pdf",
+    "document_clause_count": 46
+  },
+  "metrics": {
+    "question_count": 8,
+    "supported_question_count": 6,
+    "unsupported_question_count": 2,
+    "support_decision_accuracy": 0.875,
+    "expected_evidence_term_hit_rate": 0.875,
+    "citation_validity_rate": 1.0,
+    "document_isolation_rate": 1.0,
+    "safe_abstention_rate": 0.5,
+    "supported_answers_without_validated_evidence": 0,
+    "semantic_answer_correctness": "NOT_MEASURED"
+  },
+  "interpretation": "This run verifies the real retrieval and evidence-validation path with a deterministic provider. The mock response is intentionally generic, so it cannot support a claim about Gemini answer quality or human-rated semantic correctness.",
+  "cases": [
+    {
+      "id": "AQ01",
+      "question": "Welche Schadenersatzansprüche werden bezahlt?",
+      "expected_supported": true,
+      "expected_evidence_terms": [
+        "schadenersatzansprüche"
+      ],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 54) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 54,
+            "clause_type": "coverage",
+            "text": "Verwendungszweck können \nfolgende Leistungen zusätzlich versichert werden: \n\n̶  Auto PLUS24service",
+            "page_number": null,
+            "confidence": 0.37,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 57,
+            "clause_type": "definition",
+            "text": "̶  Eigenschadendeckung bei im Eigentum befindlichen \n\nBauwerken \ngedeckt werden Ersatzansprüche, die auf Schäden an \nim Eigentum des Versicherungsnehmers stehenden \nBauwerken durch die Verwendung des versicherten \nFahrzeugs durch den Versicherungsnehmer selbst oder \nmitversicherte Personen zurückzuführen sind, z.B. \nGebäude inkl. Gartenzaun, Garagentor.",
+            "page_number": null,
+            "confidence": 0.5,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 58,
+            "clause_type": "definition",
+            "text": "Schäden ab \nEUR 500 bis EUR 50.000 \n\ndazugehörenden Trainingsfahrten \n\nX der Teil des Schadens, der die Versicherungssumme \n\nübersteigt \n\nX vorsätzlich herbeigeführte Schäden \nX Schadenersatzansprüche des Lenkers \nX Nuklearschäden \n\nGibt es Deckungsbeschränkungen?",
+            "page_number": null,
+            "confidence": 0.173,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 62,
+            "clause_type": "limit",
+            "text": "Vereinbarungen zur Verwendung des Fahrzeuges nicht \n\neingehalten werden \n\n!",
+            "page_number": null,
+            "confidence": 0.195,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 63,
+            "clause_type": "limit",
+            "text": "mehr Personen als zulässig befördert werden. \n!",
+            "page_number": null,
+            "confidence": 0.338,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 68,
+            "clause_type": "territorial_scope",
+            "text": "✓  Der Geltungsbereich kann vertraglich erweitert werden.",
+            "page_number": null,
+            "confidence": 0.329,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 70,
+            "clause_type": "obligation",
+            "text": "̶  UNIQA muss vollständig und ehrlich über das versicherte Risiko informiert werden – vor Vertragsabschluss und während der \n\nVertragslaufzeit.",
+            "page_number": null,
+            "confidence": 0.633,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 72,
+            "clause_type": "obligation",
+            "text": "̶  Jeder Schaden muss klein gehalten werden.",
+            "page_number": null,
+            "confidence": 0.365,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    },
+    {
+      "id": "AQ02",
+      "question": "Sind Nuklearschäden versichert?",
+      "expected_supported": true,
+      "expected_evidence_terms": [
+        "nuklearschäden"
+      ],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 58) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 58,
+            "clause_type": "definition",
+            "text": "Schäden ab \nEUR 500 bis EUR 50.000 \n\ndazugehörenden Trainingsfahrten \n\nX der Teil des Schadens, der die Versicherungssumme \n\nübersteigt \n\nX vorsätzlich herbeigeführte Schäden \nX Schadenersatzansprüche des Lenkers \nX Nuklearschäden \n\nGibt es Deckungsbeschränkungen?",
+            "page_number": null,
+            "confidence": 0.173,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    },
+    {
+      "id": "AQ03",
+      "question": "Wo gilt der Versicherungsschutz in Europa?",
+      "expected_supported": true,
+      "expected_evidence_terms": [
+        "europa"
+      ],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 67) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 67,
+            "clause_type": "territorial_scope",
+            "text": "In Europa – im geografischen Sinn.",
+            "page_number": null,
+            "confidence": 0.749,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    },
+    {
+      "id": "AQ04",
+      "question": "Wann muss ein Schaden UNIQA gemeldet werden?",
+      "expected_supported": true,
+      "expected_evidence_terms": [
+        "gemeldet",
+        "uniqa"
+      ],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 70) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 70,
+            "clause_type": "obligation",
+            "text": "̶  UNIQA muss vollständig und ehrlich über das versicherte Risiko informiert werden – vor Vertragsabschluss und während der \n\nVertragslaufzeit.",
+            "page_number": null,
+            "confidence": 0.633,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 72,
+            "clause_type": "obligation",
+            "text": "̶  Jeder Schaden muss klein gehalten werden.",
+            "page_number": null,
+            "confidence": 0.365,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 76,
+            "clause_type": "obligation",
+            "text": "Wenn Ansprüche gerichtlich geltend \n\ngemacht werden, müssen Sie alle Weisungen der UNIQA befolgen und dem Anwalt der UNIQA Vollmacht erteilen.",
+            "page_number": null,
+            "confidence": 0.211,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 77,
+            "clause_type": "obligation",
+            "text": "Bei Personenschäden muss Hilfe geleistet oder für fremde Hilfe gesorgt und unverzüglich die nächste Polizeidienststelle \n\nverständigt werden.",
+            "page_number": null,
+            "confidence": 0.631,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 54,
+            "clause_type": "coverage",
+            "text": "Verwendungszweck können \nfolgende Leistungen zusätzlich versichert werden: \n\n̶  Auto PLUS24service",
+            "page_number": null,
+            "confidence": 0.37,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 57,
+            "clause_type": "definition",
+            "text": "̶  Eigenschadendeckung bei im Eigentum befindlichen \n\nBauwerken \ngedeckt werden Ersatzansprüche, die auf Schäden an \nim Eigentum des Versicherungsnehmers stehenden \nBauwerken durch die Verwendung des versicherten \nFahrzeugs durch den Versicherungsnehmer selbst oder \nmitversicherte Personen zurückzuführen sind, z.B. \nGebäude inkl. Gartenzaun, Garagentor.",
+            "page_number": null,
+            "confidence": 0.5,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 62,
+            "clause_type": "limit",
+            "text": "Vereinbarungen zur Verwendung des Fahrzeuges nicht \n\neingehalten werden \n\n!",
+            "page_number": null,
+            "confidence": 0.195,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 63,
+            "clause_type": "limit",
+            "text": "mehr Personen als zulässig befördert werden. \n!",
+            "page_number": null,
+            "confidence": 0.338,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    },
+    {
+      "id": "AQ05",
+      "question": "Wann beginnt die Deckung?",
+      "expected_supported": true,
+      "expected_evidence_terms": [
+        "beginnt",
+        "beginn"
+      ],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 81) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 81,
+            "clause_type": "coverage",
+            "text": "Wann beginnt und endet die Deckung?",
+            "page_number": null,
+            "confidence": 0.299,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 78,
+            "clause_type": "duration",
+            "text": "Wann und wie zahle ich?",
+            "page_number": null,
+            "confidence": 0.241,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 79,
+            "clause_type": "obligation",
+            "text": "Wann: Sie zahlen Ihre Prämie fristgerecht im Voraus – wie im Vertrag vereinbart: jährlich, halbjährlich, vierteljährlich oder \nmonatlich.",
+            "page_number": null,
+            "confidence": 0.575,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 83,
+            "clause_type": "coverage",
+            "text": "Durch Ausstellung einer Versicherungsbestätigung beginnt der Versicherungsschutz bereits vor der Zusendung der Polizze.",
+            "page_number": null,
+            "confidence": 0.237,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    },
+    {
+      "id": "AQ06",
+      "question": "Wie kann ich den Vertrag kündigen?",
+      "expected_supported": true,
+      "expected_evidence_terms": [
+        "kündigen",
+        "gekündigt"
+      ],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 86) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 86,
+            "clause_type": "coverage",
+            "text": "Wie kann ich den Vertrag kündigen?",
+            "page_number": null,
+            "confidence": 0.367,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 84,
+            "clause_type": "definition",
+            "text": "Der Versicherungsschutz endet nach Vertragsablauf nur wenn Sie kündigen oder UNIQA den Vertrag kündigt.",
+            "page_number": null,
+            "confidence": 0.16,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 68,
+            "clause_type": "territorial_scope",
+            "text": "✓  Der Geltungsbereich kann vertraglich erweitert werden.",
+            "page_number": null,
+            "confidence": 0.329,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 79,
+            "clause_type": "obligation",
+            "text": "Wann: Sie zahlen Ihre Prämie fristgerecht im Voraus – wie im Vertrag vereinbart: jährlich, halbjährlich, vierteljährlich oder \nmonatlich.",
+            "page_number": null,
+            "confidence": 0.575,
+            "provenance": "DOCUMENT_EXTRACTED"
+          },
+          {
+            "clause_id": 88,
+            "clause_type": "duration",
+            "text": "Beträgt die Laufzeit weniger als ein Jahr, so endet der Vertrag ohne dass es einer Kündigung bedarf.",
+            "page_number": null,
+            "confidence": 0.337,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    },
+    {
+      "id": "AQ07",
+      "question": "Welche Regeln gelten für eine Mondkolonie?",
+      "expected_supported": false,
+      "expected_evidence_terms": [],
+      "actual_response": {
+        "answer": "Basierend auf den verfügbaren Belegen (Beleg 59) lässt sich dies wie folgt beantworten.",
+        "supported": true,
+        "key_points": [
+          "Mock key point"
+        ],
+        "attention_points": [],
+        "evidence": [
+          {
+            "clause_id": 59,
+            "clause_type": "territorial_scope",
+            "text": "Kein Versicherungsschutz, eingeschränkter \nVersicherungsschutz oder eine Regressmöglichkeit \nbestehen, wenn \n\n!",
+            "page_number": null,
+            "confidence": 0.18,
+            "provenance": "DOCUMENT_EXTRACTED"
+          }
+        ],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": false,
+        "expected_evidence_term_found": false,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": false
+      }
+    },
+    {
+      "id": "AQ08",
+      "question": "Wie lautet die Telefonnummer meiner Ärztin?",
+      "expected_supported": false,
+      "expected_evidence_terms": [],
+      "actual_response": {
+        "answer": "Diese Information konnte aus dem hochgeladenen Dokument nicht eindeutig bestätigt werden.",
+        "supported": false,
+        "key_points": [],
+        "attention_points": [],
+        "evidence": [],
+        "document": {
+          "document_title": "uniqa_kfz_haftpflicht_ipid.pdf",
+          "detected_insurer": null,
+          "detected_product_line": null
+        },
+        "available": true,
+        "unavailable_reason": null
+      },
+      "checks": {
+        "support_decision_correct": true,
+        "expected_evidence_term_found": true,
+        "all_citations_belong_to_selected_document": true,
+        "all_evidence_has_document_extracted_provenance": true,
+        "safe_abstention_for_unsupported_case": true
+      }
+    }
+  ]
+}

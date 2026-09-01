@@ -1,0 +1,58 @@
+{
+  "_provenance": {
+    "source_document": "uniqa_kfz_haftpflicht_ipid.pdf",
+    "source_description": "Official UNIQA Kfz-Haftpflicht IPID listed in backend/data/source_documents/MANIFEST.json.",
+    "labelling_method": "Questions and expected evidence terms were hand-labelled against the text of the official two-page IPID. Unsupported questions intentionally use concepts absent from that document.",
+    "language": "de"
+  },
+  "questions": [
+    {
+      "id": "AQ01",
+      "question": "Welche Schadenersatzansprüche werden bezahlt?",
+      "expected_supported": true,
+      "expected_evidence_terms": ["schadenersatzansprüche"]
+    },
+    {
+      "id": "AQ02",
+      "question": "Sind Nuklearschäden versichert?",
+      "expected_supported": true,
+      "expected_evidence_terms": ["nuklearschäden"]
+    },
+    {
+      "id": "AQ03",
+      "question": "Wo gilt der Versicherungsschutz in Europa?",
+      "expected_supported": true,
+      "expected_evidence_terms": ["europa"]
+    },
+    {
+      "id": "AQ04",
+      "question": "Wann muss ein Schaden UNIQA gemeldet werden?",
+      "expected_supported": true,
+      "expected_evidence_terms": ["gemeldet", "uniqa"]
+    },
+    {
+      "id": "AQ05",
+      "question": "Wann beginnt die Deckung?",
+      "expected_supported": true,
+      "expected_evidence_terms": ["beginnt", "beginn"]
+    },
+    {
+      "id": "AQ06",
+      "question": "Wie kann ich den Vertrag kündigen?",
+      "expected_supported": true,
+      "expected_evidence_terms": ["kündigen", "gekündigt"]
+    },
+    {
+      "id": "AQ07",
+      "question": "Welche Regeln gelten für eine Mondkolonie?",
+      "expected_supported": false,
+      "expected_evidence_terms": []
+    },
+    {
+      "id": "AQ08",
+      "question": "Wie lautet die Telefonnummer meiner Ärztin?",
+      "expected_supported": false,
+      "expected_evidence_terms": []
+    }
+  ]
+}

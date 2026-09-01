@@ -1,0 +1,43 @@
+{
+  "appName": "InsureCompare.at",
+  "tagline": "Verstehen Sie Ihre Versicherung. Nicht nur den Preis.",
+  "language": {
+    "en": "English",
+    "de": "Deutsch",
+    "switchTo": "Sprache wechseln"
+  },
+  "actions": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "back": "Zurück",
+    "backToHome": "Zurück zur Startseite",
+    "backToDashboard": "Zurück zum Dashboard",
+    "viewDetails": "Details anzeigen",
+    "viewFullDetails": "Vollständige Policendetails anzeigen",
+    "getStarted": "Jetzt starten",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "reset": "Zurücksetzen",
+    "continue": "Weiter"
+  },
+  "status": {
+    "loading": "Wird geladen…",
+    "yes": "Ja",
+    "no": "Nein",
+    "notAvailable": "—"
+  },
+  "footer": {
+    "copyright": "© {{year}} InsureCompare.at",
+    "tagline": "Versicherungen transparent vergleichen und besser verstehen.",
+    "legalLink": "Rechtliche Hinweise"
+  },
+  "legal": {
+    "title": "Rechtliche Hinweise",
+    "intro": "InsureCompare.at ist eine Plattform zum Vergleich und zur Information über Versicherungen.",
+    "notice": "InsureCompare.at stellt keine verbindlichen Versicherungsangebote bereit, schließt keine Versicherungsverträge ab und bietet keine regulierte Finanzberatung. Produkt- und Preisinformationen sind stets anhand der aktuellen offiziellen Unterlagen des Versicherers zu überprüfen."
+  },
+  "demoData": {
+    "label": "Demonstrationsdaten",
+    "premium": "Demonstrationsprämie"
+  }
+}

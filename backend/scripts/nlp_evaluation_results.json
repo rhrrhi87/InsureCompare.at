@@ -1,0 +1,1004 @@
+{
+  "ocr_synthetic": {
+    "clean_large_font": {
+      "note": "Best-case: large clean font, high contrast, no artefacts.",
+      "font_size": 28,
+      "ground_truth": "UNIQA Kfz-Versicherung\nDie monatliche Praemie betraegt EUR 65,00 pro Monat.\nDer Selbstbehalt betraegt EUR 350,00 pro Schadenfall.",
+      "ocr_text": "UNIQA Kfz-Versicherung\nDie monatliche Praemie betraegt EUR 65,00 pro Monat.\nDer Selbstbehalt betraegt EUR 350,00 pro Schadenfall.",
+      "tesseract_mean_confidence": 94.05882352941177,
+      "used_ocr": true,
+      "character_error_rate": 0.0,
+      "word_error_rate": 0.0
+    },
+    "small_font": {
+      "note": "Harder case: small font size, more representative of a scanned page.",
+      "font_size": 14,
+      "ground_truth": "Allianz Haushaltsversicherung\nDie Versicherungssumme betraegt EUR 150.000,00.\nVersichert sind Feuer, Sturm und Wasserschaeden.",
+      "ocr_text": "‚Allianz Haushaltsversicherung\nDie Versicherungssumme betraegt EUR 150.000,00.\nVersichert sind Feuer, Sturm und Wasserschaeden.",
+      "tesseract_mean_confidence": 85.07692307692308,
+      "used_ocr": true,
+      "character_error_rate": 0.0079,
+      "word_error_rate": 0.0769
+    }
+  },
+  "ocr_real_document": {
+    "source_document": "uniqa_kfz_haftpflicht_ipid.pdf",
+    "source_note": "See backend/data/source_documents/MANIFEST.json for the exact official source URL.",
+    "page": 1,
+    "ground_truth_char_count": 2818,
+    "ground_truth_word_count": 336,
+    "tesseract_mean_confidence": 92.56342182890856,
+    "used_ocr": true,
+    "character_error_rate": 0.5621,
+    "word_error_rate": 0.6905,
+    "order_independent_word_overlap": {
+      "precision": 0.9735,
+      "recall": 0.991,
+      "f1": 0.9821
+    },
+    "interpretation": "High word-overlap F1 alongside a high WER means Tesseract recognised most individual words correctly (consistent with the reported mean confidence) but read them in the wrong order — this source document uses a two-column 'Was ist versichert? / Was ist nicht versichert?' layout, and PSM 6 (single uniform text block) reads across both columns line-by-line rather than column-by-column. This is a document-layout-analysis limitation, not a character-recognition failure, and is reported as such rather than as a single misleading WER number."
+  },
+  "clause_classification_synthetic": {
+    "keyword_fallback": {
+      "status": "VERIFIED",
+      "n_examples": 60,
+      "accuracy": 0.7,
+      "macro_precision": 0.8506,
+      "macro_recall": 0.7,
+      "macro_f1": 0.7146,
+      "mean_confidence": 0.7,
+      "per_class": {
+        "coverage": {
+          "precision": 0.6667,
+          "recall": 0.6667,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "exclusion": {
+          "precision": 0.8571,
+          "recall": 1.0,
+          "f1": 0.9231,
+          "support": 6
+        },
+        "limit": {
+          "precision": 0.6667,
+          "recall": 0.6667,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "deductible": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 6
+        },
+        "obligation": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "definition": {
+          "precision": 1.0,
+          "recall": 0.3333,
+          "f1": 0.5,
+          "support": 6
+        },
+        "territorial_scope": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "duration": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "optional_benefit": {
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091,
+          "support": 6
+        },
+        "other": {
+          "precision": 0.3158,
+          "recall": 1.0,
+          "f1": 0.48,
+          "support": 6
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "coverage",
+          "exclusion",
+          "limit",
+          "deductible",
+          "obligation",
+          "definition",
+          "territorial_scope",
+          "duration",
+          "optional_benefit",
+          "other"
+        ],
+        "matrix": [
+          [
+            4,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+          ]
+        ]
+      }
+    },
+    "zero_shot_gbert": {
+      "status": "VERIFIED",
+      "n_examples": 60,
+      "accuracy": 0.4,
+      "macro_precision": 0.4138,
+      "macro_recall": 0.4,
+      "macro_f1": 0.3612,
+      "mean_confidence": 0.3893,
+      "per_class": {
+        "coverage": {
+          "precision": 0.2308,
+          "recall": 0.5,
+          "f1": 0.3158,
+          "support": 6
+        },
+        "exclusion": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        "limit": {
+          "precision": 0.4167,
+          "recall": 0.8333,
+          "f1": 0.5556,
+          "support": 6
+        },
+        "deductible": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        },
+        "obligation": {
+          "precision": 0.1905,
+          "recall": 0.6667,
+          "f1": 0.2963,
+          "support": 6
+        },
+        "definition": {
+          "precision": 0.8,
+          "recall": 0.6667,
+          "f1": 0.7273,
+          "support": 6
+        },
+        "territorial_scope": {
+          "precision": 0.5,
+          "recall": 0.1667,
+          "f1": 0.25,
+          "support": 6
+        },
+        "duration": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "optional_benefit": {
+          "precision": 1.0,
+          "recall": 0.6667,
+          "f1": 0.8,
+          "support": 6
+        },
+        "other": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "coverage",
+          "exclusion",
+          "limit",
+          "deductible",
+          "obligation",
+          "definition",
+          "territorial_scope",
+          "duration",
+          "optional_benefit",
+          "other"
+        ],
+        "matrix": [
+          [
+            3,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            1,
+            4,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            3,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "clause_classification_real": {
+    "keyword_fallback": {
+      "status": "VERIFIED",
+      "n_examples": 59,
+      "accuracy": 0.5593,
+      "macro_precision": 0.5482,
+      "macro_recall": 0.505,
+      "macro_f1": 0.4898,
+      "mean_confidence": 0.7,
+      "per_class": {
+        "coverage": {
+          "precision": 0.5455,
+          "recall": 0.6,
+          "f1": 0.5714,
+          "support": 10
+        },
+        "exclusion": {
+          "precision": 0.9444,
+          "recall": 1.0,
+          "f1": 0.9714,
+          "support": 17
+        },
+        "limit": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.6667,
+          "support": 4
+        },
+        "deductible": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 1
+        },
+        "obligation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 12
+        },
+        "definition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "territorial_scope": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 6
+        },
+        "duration": {
+          "precision": 0.3333,
+          "recall": 0.2,
+          "f1": 0.25,
+          "support": 5
+        },
+        "optional_benefit": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6667,
+          "support": 2
+        },
+        "other": {
+          "precision": 0.0588,
+          "recall": 0.5,
+          "f1": 0.1053,
+          "support": 2
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "coverage",
+          "exclusion",
+          "limit",
+          "deductible",
+          "obligation",
+          "definition",
+          "territorial_scope",
+          "duration",
+          "optional_benefit",
+          "other"
+        ],
+        "matrix": [
+          [
+            6,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            10
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      }
+    },
+    "zero_shot_gbert": {
+      "status": "VERIFIED",
+      "n_examples": 59,
+      "accuracy": 0.322,
+      "macro_precision": 0.3035,
+      "macro_recall": 0.2693,
+      "macro_f1": 0.2263,
+      "mean_confidence": 0.3649,
+      "per_class": {
+        "coverage": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 10
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 0.1765,
+          "f1": 0.3,
+          "support": 17
+        },
+        "limit": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "support": 4
+        },
+        "deductible": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1
+        },
+        "obligation": {
+          "precision": 0.3684,
+          "recall": 0.5833,
+          "f1": 0.4516,
+          "support": 12
+        },
+        "definition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "territorial_scope": {
+          "precision": 0.6667,
+          "recall": 0.3333,
+          "f1": 0.4444,
+          "support": 6
+        },
+        "duration": {
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.6667,
+          "support": 5
+        },
+        "optional_benefit": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        },
+        "other": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 2
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "coverage",
+          "exclusion",
+          "limit",
+          "deductible",
+          "obligation",
+          "definition",
+          "territorial_scope",
+          "duration",
+          "optional_benefit",
+          "other"
+        ],
+        "matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            10,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            3,
+            11,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            7,
+            2,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            2,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      }
+    }
+  },
+  "numeric_extraction": {
+    "monthly_premium_eur": {
+      "accuracy": 1.0,
+      "n": 4,
+      "misses": []
+    },
+    "annual_premium_eur": {
+      "accuracy": 1.0,
+      "n": 4,
+      "misses": []
+    },
+    "deductible_eur": {
+      "accuracy": 1.0,
+      "n": 8,
+      "misses": []
+    },
+    "coverage_limit_eur": {
+      "accuracy": 1.0,
+      "n": 8,
+      "misses": []
+    }
+  },
+  "vocabulary_extraction": {
+    "precision": 0.9474,
+    "recall": 1.0,
+    "f1": 0.973,
+    "n_examples": 8,
+    "per_example": [
+      {
+        "text": "Versichert sind Diebstahl, Sturm und Glasbruch im Haushalt.",
+        "predicted": [
+          "Glass breakage",
+          "Storm damage",
+          "Theft protection"
+        ],
+        "expected": [
+          "Glass breakage",
+          "Storm damage",
+          "Theft protection"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Ausgeschlossen sind Schäden durch Kernenergie und Vorsatz.",
+        "predicted": [
+          "Intentional damage",
+          "Nuclear events"
+        ],
+        "expected": [
+          "Intentional damage",
+          "Nuclear events"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Die Kaskoversicherung deckt Vollkasko- und Teilkaskoschäden am Fahrzeug.",
+        "predicted": [
+          "Comprehensive coverage",
+          "Partial comprehensive coverage"
+        ],
+        "expected": [
+          "Comprehensive coverage",
+          "Partial comprehensive coverage"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Schäden durch grobe Fahrlässigkeit oder Rennveranstaltungen sind nicht versichert.",
+        "predicted": [
+          "Gross negligence",
+          "Racing events"
+        ],
+        "expected": [
+          "Gross negligence",
+          "Racing events"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Der Reiseschutz umfasst Reisegepäck und Stornokosten.",
+        "predicted": [
+          "Travel luggage",
+          "Trip cancellation"
+        ],
+        "expected": [
+          "Travel luggage",
+          "Trip cancellation"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Die Haftpflichtversicherung schützt vor Schäden durch Feuer und Wasser.",
+        "predicted": [
+          "Fire damage",
+          "Liability coverage",
+          "Water damage"
+        ],
+        "expected": [
+          "Fire damage",
+          "Liability coverage",
+          "Water damage"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Nicht versichert sind Schäden unter Alkohol- oder Drogeneinfluss.",
+        "predicted": [
+          "Alcohol-related incidents",
+          "Drug-related incidents"
+        ],
+        "expected": [
+          "Alcohol-related incidents",
+          "Drug-related incidents"
+        ],
+        "exact_match": true
+      },
+      {
+        "text": "Der Rechtsschutz und der Diebstahlschutz für das Fahrrad sind inkludiert.",
+        "predicted": [
+          "Bicycle theft",
+          "Legal protection",
+          "Theft protection"
+        ],
+        "expected": [
+          "Bicycle theft",
+          "Legal protection"
+        ],
+        "exact_match": false
+      }
+    ]
+  }
+}
